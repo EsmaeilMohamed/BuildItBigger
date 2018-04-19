@@ -6,4 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".JokeViewerActivity">
 
+    <TextView
+        android:id="@+id/tv_joke_viewer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="TextView" />
 </android.support.constraint.ConstraintLayout>
