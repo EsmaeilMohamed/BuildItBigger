@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 import com.thedevwolf.jokerserver.Joker;
 import com.thedevwolf.jokerviewer.JokeViewerActivity;
+import com.udacity.gradle.builditbigger.R;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -46,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
     public void tellJoke(View view) {
        /* startActivity(new Intent(this, JokeViewerActivity.class)
         .putExtra(getString(R.string.joke_key),new Joker().tellJoke()));*/
-       new EndPointTask().execute(this);
+      // new EndPointTask().execute(this);
     }
 
 

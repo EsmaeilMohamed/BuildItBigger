@@ -21,8 +21,8 @@ public class Joker {
 
 
     public String tellJoke(){
-        //12 is the maximum and the 1 is our minimum
-        int  n = random.nextInt(12) + 1;
+        //11 is the maximum and the 1 is our minimum
+        int  n = random.nextInt(11) + 1;
         return jokes[n];
     }
 }
