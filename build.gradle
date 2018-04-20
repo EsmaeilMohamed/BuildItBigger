@@ -14,9 +14,19 @@ buildscript {
     }
 }
 
+
 allprojects {
     repositories {
         jcenter()
         google()
+    }
+
+
+
+    task configureTestTask{
+        dependsOn ':backend:appengineStart'
+        dependsOn ':app:connectedAndroidTest'
+        dependsOn ':backend:appengineStop'
+
     }
 }

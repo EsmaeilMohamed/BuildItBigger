@@ -13,7 +13,9 @@
         android:id="@+id/instructions_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="48dp"
         android:text="@string/instructions"
         android:textAppearance="@style/TextAppearance.AppCompat.Title" />
 
@@ -23,7 +25,8 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="120dp"
         android:layout_marginStart="120dp"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="100dp"
+
         android:text="@string/button_text" />
     <ProgressBar
         android:id="@+id/pb_joke"

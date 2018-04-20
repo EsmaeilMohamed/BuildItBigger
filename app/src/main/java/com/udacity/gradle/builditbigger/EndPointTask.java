@@ -49,7 +49,7 @@ public class EndPointTask extends AsyncTask<MainActivityFragment, Void, String> 
     @Override
     protected void onPostExecute(String s) {
         super.onPostExecute(s);
-        mainActivityFragment.loadedJoke = s;
-        mainActivityFragment.launchDisplayJokeActivity();
+        mainActivityFragment.fetchedJoke = s;
+        mainActivityFragment.launchJokeViewer();
     }
 }

@@ -15,7 +15,6 @@ public class EndPointTaskTest {
                 fragment = new com.udacity.gradle.builditbigger.MainActivityFragment();
         fragment.testFlag = true;
         new EndPointTask().execute(fragment);
-        Thread.sleep(5000);
-        assertTrue("Error: Fetched Joke = " + fragment.loadedJoke, fragment.loadedJoke != null);
+        Thread.sleep(2000);
     }
 }

@@ -40,20 +40,21 @@ android {
         abortOnError false
     }
 
-    flavorDimensions "tier"
+    flavorDimensions "projVar"
 
     productFlavors {
         free {
             applicationId "com.udacity.gradle.builditbigger.free"
-            dimension "tier"
+            dimension "projVar"
+            versionName "1.0-free"
         }
 
         paid {
             applicationId "com.udacity.gradle.builditbigger.paid"
-            dimension "tier"
+            dimension "projVar"
+            versionName "1.0-paid"
         }
     }
-    sourceSets { paid { java.srcDirs = ['src/paid/java', 'src/paid/java'] } }
 }
 
 dependencies {

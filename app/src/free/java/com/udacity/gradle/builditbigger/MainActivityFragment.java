@@ -14,8 +14,6 @@ import android.widget.ProgressBar;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.thedevwolf.jokerviewer.JokeViewerActivity;
-import com.udacity.gradle.builditbigger.EndPointTask;
-import com.udacity.gradle.builditbigger.R;
 
 
 /**
@@ -25,7 +23,7 @@ public class MainActivityFragment extends Fragment {
 
     ProgressBar pbJoke = null;
     Button btnJoke;
-    public String loadedJoke = null;
+    public String fetchedJoke = null;
     public boolean testFlag = false;
 
     public MainActivityFragment() {
@@ -67,12 +65,12 @@ public class MainActivityFragment extends Fragment {
         new EndPointTask().execute(this);
     }
 
-    public void launchDisplayJokeActivity(){
+    public void launchJokeViewer(){
         if (!testFlag){
             Context context = getActivity();
             Intent intent = new Intent(context, JokeViewerActivity.class);
-            intent.putExtra(context.getString(R.string.joke_key), loadedJoke);
-            //Toast.makeText(context, loadedJoke, Toast.LENGTH_LONG).show();
+            intent.putExtra(context.getString(R.string.joke_key), fetchedJoke);
+            //Toast.makeText(context, fetchedJoke, Toast.LENGTH_LONG).show();
             context.startActivity(intent);
             pbJoke.setVisibility(View.GONE);
         }
