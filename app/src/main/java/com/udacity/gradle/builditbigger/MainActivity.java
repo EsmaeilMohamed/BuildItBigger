@@ -44,11 +44,7 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void tellJoke(View view) {
-       /* startActivity(new Intent(this, JokeViewerActivity.class)
-        .putExtra(getString(R.string.joke_key),new Joker().tellJoke()));*/
-      // new EndPointTask().execute(this);
-    }
+
 
 
 }

@@ -29,8 +29,8 @@ public class MyEndpoint {
     }
 */
 
-    @ApiMethod(name = "tellJoke")
-    public MyBean tellJoke(){
+    @ApiMethod(name = "getJoke")
+    public MyBean getJoke(){
         MyBean response = new MyBean();
         Joker joker = new Joker();
         response.setData(joker.tellJoke());

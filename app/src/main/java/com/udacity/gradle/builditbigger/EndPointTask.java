@@ -1,5 +1,6 @@
 package com.udacity.gradle.builditbigger;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.AsyncTask;
 
@@ -13,7 +14,7 @@ import java.io.IOException;
 
 public class EndPointTask extends AsyncTask<MainActivityFragment, Void, String> {
     private static MyApi myApiService = null;
-    private Context context;
+
     private MainActivityFragment mainActivityFragment;
 
     @Override
@@ -35,11 +36,11 @@ public class EndPointTask extends AsyncTask<MainActivityFragment, Void, String> 
         }
 
         mainActivityFragment=fragments[0];
-        context = mainActivityFragment.getActivity();
+
 
 
         try {
-            return myApiService.tellJoke().execute().getData();
+            return myApiService.getJoke().execute().getData();
         } catch (IOException e) {
             return e.getMessage();
         }
@@ -49,7 +50,9 @@ public class EndPointTask extends AsyncTask<MainActivityFragment, Void, String> 
     @Override
     protected void onPostExecute(String s) {
         super.onPostExecute(s);
+        //add retrieve joke to fetch joke variable in fragment
         mainActivityFragment.fetchedJoke = s;
+        //launch android library to preview joke
         mainActivityFragment.launchJokeViewer();
     }
 }
