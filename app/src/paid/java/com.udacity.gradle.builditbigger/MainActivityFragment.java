@@ -23,7 +23,7 @@ public class MainActivityFragment extends Fragment {
     ProgressBar pbJoke = null;
     Button btnJoke;
     public String fetchedJoke = null;
-    public boolean testFlag = false;
+
 
     public MainActivityFragment() {
         // Required empty public constructor
@@ -57,14 +57,13 @@ public class MainActivityFragment extends Fragment {
     }
 
     public void launchJokeViewer(){
-        if (!testFlag){
             Context context = getActivity();
             Intent intent = new Intent(context, JokeViewerActivity.class);
             intent.putExtra(context.getString(R.string.joke_key), fetchedJoke);
             //Toast.makeText(context, fetchedJoke, Toast.LENGTH_LONG).show();
             context.startActivity(intent);
             pbJoke.setVisibility(View.GONE);
-        }
+
     }
 
 }
